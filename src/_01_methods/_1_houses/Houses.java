@@ -1,4 +1,7 @@
 package _01_methods._1_houses;
+
+import org.jointheleague.graphical.robot.Robot;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2021
  *    Level 1
@@ -6,6 +9,8 @@ package _01_methods._1_houses;
 public class Houses {
 		
 	public void run() {
-		// Check the recipe to find out what code to put here
+		
+			
 	}
+	 
 }
