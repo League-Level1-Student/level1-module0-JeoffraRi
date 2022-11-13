@@ -22,10 +22,9 @@ public class SpinningRecord extends PApplet {
     // In the draw() method:
 	    // ✅ 4. Call the image() method to display the record image. Do you see it? 
 	    
-    	// 5. Make the record spin by increasing the variable from step 1.
+    	// ✅ 5. Make the record spin by increasing the variable from step 1.
      		
-    	// 6. Call the rotateImage() method to rotate record by the specified amount
-    	//    rotateImage(PImage image, int amountToRotate);
+    	// ✅ 6. Call the rotateImage() method to rotate record by the specified amount
      
     	// 7. Call the image() method to display the record image
     	//    Make sure to put this code AFTER the rotateImage() method.
