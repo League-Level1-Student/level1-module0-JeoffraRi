@@ -39,7 +39,7 @@ public class SpinningRecord extends PApplet {
     	public void draw() {
     		rotateImage(pictureOfRecord, muchSpin);	
     		image(pictureOfRecord, 1,1);
-    		muchSpin = muchSpin+100;
+    		muchSpin = muchSpin+60;
     	}
 
     @Override
