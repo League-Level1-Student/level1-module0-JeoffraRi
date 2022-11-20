@@ -49,6 +49,7 @@ public class RainGame extends PApplet {
     int bucketWidth = 50;
     int bucketHeight;
     int rainY = 0;
+    int rainX = 350;
     PImage bucket;
     PImage rain;
     PImage backdrop;
@@ -63,27 +64,27 @@ public class RainGame extends PApplet {
 
     @Override
     public void setup() {
-<<<<<<< HEAD
-    	
-    	bucket = loadImage("pixel.png");
-    	
-=======
+
     	bucket = loadImage("pixelbucket.png");
     	rain = loadImage("raindrop.png");
     	backdrop = loadImage("backdrop.png");
     	rain.resize(15, 31);
     	backdrop.resize(700, 700);
->>>>>>> 37ee545c286e075c70cb90b9ff7909a7e314cd3e
     }
 
     @Override
     public void draw() {
     background(250,250,250);
     image(backdrop, 0, 0);
-    image(rain, 350, rainY);
-    image(bucket, mouseX-50, mouseY-50);
+    image(rain, rainX, rainY);
+    image(bucket, mouseX-50, 450);
+    fill(250, 250, 250);
+    textSize(20);
+    text("Score: " + score, 10,20);
     rainY = rainY+10;
-    
+    if(rainY==450) {
+     checkCatch(rainX);
+    }
     }
 
     static public void main(String[] args) {
