@@ -7,17 +7,17 @@ import processing.core.PImage;
 //Goal: Make a game where the user has to catch rain drops in a bucket!
 //
 //In the setup() method:
-//1. If you are using an image for the bucket, load it and resize it here.
+//✅1. If you are using an image for the bucket, load it and resize it here.
 //   A bucket image, bucket.png, has been provided if you want to use it.
 //   bucket = loadImage("images/bucket.png");
 //   bucket.resize(100, 100);  // you can choose values other than 100, 100
 //
 //In the draw() method:
-//2. Set a background color
+//✅2. Set a background color
 //
- // 3. Draw a raindrop (ellipse) at the top of the screen
+ //✅3. Draw a raindrop (ellipse) at the top of the screen
  // 
- // 4. Make the rain fall down the screen.
+ //✅4. Make the rain fall down the screen.
  //    Hint: make a variable for the raindrop's Y position and change it after
 //   you draw the raindrop.
 //
@@ -48,26 +48,42 @@ public class RainGame extends PApplet {
     int score = 0;
     int bucketWidth = 50;
     int bucketHeight;
+    int rainY = 0;
     PImage bucket;
+    PImage rain;
+    PImage backdrop;
     int y;
     int x;
 
     // Sets the size of your canvas
     @Override
     public void settings() {
-        size(WIDTH, HEIGHT);
+        size(700, 700);
     }
 
     @Override
     public void setup() {
+<<<<<<< HEAD
     	
     	bucket = loadImage("pixel.png");
     	
+=======
+    	bucket = loadImage("pixelbucket.png");
+    	rain = loadImage("raindrop.png");
+    	backdrop = loadImage("backdrop.png");
+    	rain.resize(15, 31);
+    	backdrop.resize(700, 700);
+>>>>>>> 37ee545c286e075c70cb90b9ff7909a7e314cd3e
     }
 
     @Override
     public void draw() {
-    rect(50,50, 50,50);
+    background(250,250,250);
+    image(backdrop, 0, 0);
+    image(rain, 350, rainY);
+    image(bucket, mouseX-50, mouseY-50);
+    rainY = rainY+10;
+    
     }
 
     static public void main(String[] args) {
