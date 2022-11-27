@@ -49,12 +49,12 @@ public class RainGame extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 600;
     int score = 0;
-    int bucketWidth = 50;
+    int bucketWidth = 180-90;
     int bucketHeight;
     int rainY = 0;
     int rainX = 350;
-    PImage bucket;
-    PImage rain;
+    PImage hopper;
+    PImage corn;
     PImage backdrop;
     PImage start;
     int y;
@@ -70,10 +70,11 @@ public class RainGame extends PApplet {
     @Override
     public void setup() {
     	start = loadImage ("startscreen.png");
-    	bucket = loadImage("pixelbucket.png");
-    	rain = loadImage("raindrop.png");
+    	hopper = loadImage("hopper.png");
+    	corn = loadImage("corn.png");
     	backdrop = loadImage("backdrop.png");
-    	rain.resize(15, 31);
+    	corn.resize(25, 41);
+    	hopper.resize(180, 70);
     	backdrop.resize(700, 700);
     	start.resize(700, 700);
     }
@@ -83,8 +84,8 @@ public class RainGame extends PApplet {
     background(250,250,250);
     image(start, 0, 0);
     //image(backdrop, 0, 0);
-    image(rain, rainX, rainY);
-    image(bucket, mouseX-50, 450);
+    image(corn, rainX, rainY);
+    image(hopper, mouseX-100, 450);
     fill(250, 250, 250);
     textSize(20);
     text("Score: " + score, 10,20);
@@ -93,7 +94,7 @@ public class RainGame extends PApplet {
      checkCatch(rainX);
     }
     if(rainY==700) {
-     rainX = 
+     //rainX = ;
      rainY = -10;
     }
     }
