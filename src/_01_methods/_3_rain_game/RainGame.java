@@ -49,7 +49,7 @@ public class RainGame extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 600;
     int score = 0;
-    int bucketWidth = 180-90;
+    int bucketWidth = 180;
     int bucketHeight;
     int rainY = 0;
     int rainX = 350;
