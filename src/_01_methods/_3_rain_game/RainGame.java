@@ -112,10 +112,8 @@ public class RainGame extends PApplet {
 		textSize(20);
 		text("Lives: " + livez, 10, 50);
 		
-		fill(0, 255, 0);
-		rect(0, 450, 1000000, 3);
 		
-		rainY = rainY + 15 ;
+		rainY = rainY + 12 ;
 		if (rainY > 450) {
 			checkCatch(rainX);
 		}
