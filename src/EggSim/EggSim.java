@@ -28,7 +28,7 @@ public class EggSim extends PApplet {
     public void draw() {	
     	background(255,255,255);
     	if (gameStarted==true) {
-    	eggY+=5;
+    	eggY+=2;
     	}
     	//handle \/
     	fill(0,0,0);
@@ -66,7 +66,9 @@ public class EggSim extends PApplet {
     }
     public void mousePressed() {
     	gameStarted=true;
+    	eggY-=;
     	eggY-=40;
+    	eggY-=30;
     	opacity+=20;
     }
 
