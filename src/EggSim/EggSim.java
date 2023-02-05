@@ -1,6 +1,7 @@
 package EggSim;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class EggSim extends PApplet {
     static final int WIDTH = 1920;
@@ -12,23 +13,29 @@ public class EggSim extends PApplet {
     int widthpan = 920;
     int handlelength = 900;
     int handlewidth = 120;
-    boolean gameStarted = false;
     int eggY = 0;
+    int eggSpeed = 0;
+
+    boolean gameStarted = false;
+    PImage startScreen;
     @Override
+    
     public void settings() {
         size(WIDTH, HEIGHT);
     }
 
     @Override
     public void setup() {
-    	
+    	startScreen = loadImage("./EggSim/eggsim.png");
+    	startScreen.resize(1200, 945);
     }
 
     @Override
     public void draw() {	
     	background(255,255,255);
     	if (gameStarted==true) {
-    	eggY+=2;
+    	eggY+=eggSpeed;
+    	eggSpeed++;
     	}
     	//handle \/
     	fill(0,0,0);
@@ -48,27 +55,18 @@ public class EggSim extends PApplet {
     	fill(255, 200, 0);
     	ellipse(960, eggY, widthyolk, widthyolk);
     	if (!gameStarted) {
+    		//945/2 = 472
+    		//1920/2 = 960 
     		eggY = 472;
-    		fill(0,0,0);
-    		textSize(60);
-    		text("Egg Simulator", 30, 472);
-    		text("Click T     Start", 30, 540);
-    		//egg white \/
-        	fill(230, 230, 230);
-        	noStroke();
-        	ellipse(260, 520, widthwhite-100, widthwhite-105);
-        	//egg yolk \/
-        	noStroke();
-        	fill(255, 200, 0);
-        	ellipse(260, 520, widthyolk-30, widthyolk-30);
+    		background(0,0);
+    		image(startScreen, 350,0);
+    		
     	}
     	
     }
     public void mousePressed() {
     	gameStarted=true;
-    	eggY-=;
-    	eggY-=40;
-    	eggY-=30;
+    	eggSpeed-=40;
     	opacity+=20;
     }
 
