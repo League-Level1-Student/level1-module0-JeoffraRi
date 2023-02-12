@@ -13,8 +13,11 @@ public class EggSim extends PApplet {
     int widthpan = 920;
     int handlelength = 900;
     int handlewidth = 120;
-    int eggY = 0;
-    int eggSpeed = 0;
+    int score = 0;
+    int jumps = 0;
+    float eggY = 0;
+    float eggSpeed = 0;
+    float grav = 0.1f;
 
     boolean gameStarted = false;
     PImage startScreen;
@@ -35,7 +38,11 @@ public class EggSim extends PApplet {
     	background(255,255,255);
     	if (gameStarted==true) {
     	eggY+=eggSpeed;
-    	eggSpeed++;
+    	eggSpeed+=grav;
+    	}
+    	if (opacity>=400) {
+    		score++;
+    		opacity=20;
     	}
     	//handle \/
     	fill(0,0,0);
@@ -54,6 +61,10 @@ public class EggSim extends PApplet {
     	noStroke();
     	fill(255, 200, 0);
     	ellipse(960, eggY, widthyolk, widthyolk);
+    	fill(0,0,0);
+    	textSize(40);
+    	text("Score: "+score+"", 10,40);
+    	text("Jumps: "+jumps+"", 10,90);
     	if (!gameStarted) {
     		//945/2 = 472
     		//1920/2 = 960 
@@ -66,8 +77,16 @@ public class EggSim extends PApplet {
     }
     public void mousePressed() {
     	gameStarted=true;
-    	eggSpeed-=40;
-    	opacity+=20;
+    	eggSpeed=-10;
+    	opacity+=100;
+    	jumps+=1;
+    }
+    
+    public void keyPressed() {
+    	gameStarted=true;
+    	eggSpeed=-10;
+    	opacity+=100;
+    	jumps+=1;
     }
 
     static public void main(String[] args) {
