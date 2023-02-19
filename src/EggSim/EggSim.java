@@ -4,8 +4,8 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 public class EggSim extends PApplet {
-    static final int WIDTH = 1920;
-    static final int HEIGHT = 945;
+    static final int WIDTH = 1000; // 1920 originally
+    static final int HEIGHT = 600; // 945 originally
     int eggwhite = 300;
     int widthwhite = 160;
     int widthyolk = 55;
@@ -17,10 +17,13 @@ public class EggSim extends PApplet {
     int jumps = 0;
     float eggY = 0;
     float eggSpeed = 0;
-    float grav = 0.1f;
+    float grav = 0.2f;
 
     boolean gameStarted = false;
     PImage startScreen;
+    PImage bacon;
+    PImage gameover1;
+    PImage gameover2;
     @Override
     
     public void settings() {
@@ -30,7 +33,23 @@ public class EggSim extends PApplet {
     @Override
     public void setup() {
     	startScreen = loadImage("./EggSim/eggsim.png");
-    	startScreen.resize(1200, 945);
+    	float ssRatio = 1699/1281;
+    	
+    	if (WIDTH>HEIGHT) {
+    		System.out.println((int) (HEIGHT*ssRatio));
+    		startScreen.resize((int) (HEIGHT*ssRatio), HEIGHT);
+    	} else {
+    		startScreen.resize(WIDTH, (int) (WIDTH/ssRatio));
+    	}
+    	
+    	bacon = loadImage("./EggSim/baconpiece.png"); 
+    	bacon.resize(400, 400);
+    	
+    	gameover1 = loadImage("./EggSim/gameover1.png");
+    	gameover1.resize(1200, 945);
+    	
+    	gameover2 = loadImage("./EggSim/gameover2.png");
+    	gameover2.resize(1200, 945);
     }
 
     @Override
