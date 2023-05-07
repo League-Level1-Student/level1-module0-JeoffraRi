@@ -26,19 +26,37 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address” )
-
+		String amtrakIsOffended = "file:///Users/asherlaw/Documents/Screenshot%202023-05-07%20at%201.19.56%20PM.png";
 		// 2. create a variable of type "Component" that will hold your image
 
 		// 3. use the "createImage()" method below to initialize your Component
-
+		Component c = createImage(amtrakIsOffended);
 		// 4. add the image to the quiz window
-
+		quizWindow.add(c);
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		String ans = JOptionPane.showInputDialog("What type of train car is this? (It's case sensitive, bro!)");
 		// 7. print "CORRECT" if the user gave the right answer
-
+		if (ans.equalsIgnoreCase("Superliner")) {
+			JOptionPane.showMessageDialog(null, "You are super right diddly doo! Haha!");
+		}else {
+			JOptionPane.showMessageDialog(null, "Nooooooooooooo! You're wrong! As punishment you must fight Sussy Samuel! ඞඞඞඞඞඞඞඞ SO SUSSSSYYY! AMOGUS");
+		}
+		String ans2 = JOptionPane.showInputDialog("What is the company owning the train in this image? (It's still case sensitive, bro!)");
+		// 7. print "CORRECT" if the user gave the right answer
+		if (ans2.equalsIgnoreCase("BNSF")) {
+			JOptionPane.showMessageDialog(null, "YOU GUESSSSSED IT WOW THATS AMAZING WOOOO! Not at all LIKE THE COMPANY WAS ON THE SIDE OF THE TRAIN");
+		}else {
+			JOptionPane.showMessageDialog(null, "YOU BEITH WRONGGGG!11!!1!11!!! AAAAAAAAA! AAAA! AAAAIDJDNJNJDIQDNJK!");
+		}
+		String ans3 = JOptionPane.showInputDialog("What company is SUPPOSED to own this train car (It's STILL case sensitive, dude!)");
+		// 7. print "CORRECT" if the user gave the right answer
+		if (ans3.equalsIgnoreCase("Amtrak")) {
+			JOptionPane.showMessageDialog(null, "WOOOOOOWWW! That was amazing! I can't believe you did that! You're awesome...FOR NOW! ඞඞඞ");
+		}else {
+			JOptionPane.showMessageDialog(null, "STOP BEING WRONG!11!!111!!YOU ARE TOO WRONG AAAASHHSAHSJHAKSK! YOU SHALL BE SMASHED IN MONSTR.PARTY");
+		}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
@@ -57,11 +75,11 @@ public class PhotoQuiz {
 
 	}
 
-	private Component createImage(String imageUrl) {
+	private Component createImage(String AmtrakIsOffended) {
 		JLabel imageLabel = new JLabel();
 		URL url;
 		try {
-			url = new URL(imageUrl);
+			url = new URL(AmtrakIsOffended);
 			Icon icon = new ImageIcon(url);
 			imageLabel.setIcon(icon);
 		} catch (MalformedURLException e) {
