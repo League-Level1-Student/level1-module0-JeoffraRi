@@ -47,9 +47,9 @@ public class DrumKit implements MouseListener {
         // Add this MouseListener to drumLabel
 
         // *** Write the code in the mouseClicked() method below
-
+         drumLabel.addMouseListener(this);
         //  Set the layout of the panel to "new GridLayout()"
-
+         
         //  Add a cymbal image to make a Drum Kit (one has been provided).
         //  You will need a different sound to go with this image.
         //  Remember to add this MouseListener to it. Run the program.
@@ -60,9 +60,9 @@ public class DrumKit implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         // Print "mouse clicked" to the console. Run your program and watch
         // the console to see when this is printed.
-
+    	System.out.println("mouse clicked");
         //JLabel labelClicked = (JLabel) e.getSource(); // This line gets the label
-                                                        // that the mouse
+        playSound("rickroll.mp3"); 	                     // that the mouse
                                                         // clicked on
 
         // You can use the drum sound provided ("drum.wav") or
