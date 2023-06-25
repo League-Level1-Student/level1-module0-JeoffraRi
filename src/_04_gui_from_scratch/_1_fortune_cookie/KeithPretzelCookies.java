@@ -39,7 +39,7 @@ public class KeithPretzelCookies implements ActionListener {
 		String grocery  = new String("You will become a grocery store owner!");
 		String salesman  = new String("You will become a traveling salesman!");
 		String data  = new String("You will become a data manager!");
-		   int rand = new Random().nextInt(4);
+		   int rand = new Random().nextInt(5);
 		if (rand==1) {
 		System.out.println("Woohoo!");
 		speak("You will become a landscaper!");
@@ -72,6 +72,54 @@ public class KeithPretzelCookies implements ActionListener {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 	}
 
