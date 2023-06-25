@@ -2,6 +2,7 @@ package _04_gui_from_scratch._1_fortune_cookie;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -34,80 +35,25 @@ public class KeithPretzelCookies implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		String landscaper  = new String("You will become a landscaper!");
+		String grocery  = new String("You will become a grocery store owner!");
+		String salesman  = new String("You will become a traveling salesman!");
+		String data  = new String("You will become a data manager!");
+		   int rand = new Random().nextInt(4);
+		if (rand==1) {
 		System.out.println("Woohoo!");
-		speak("Well, you can tell by the way I use my walk \n"
-				+ "I'm a woman's man, no time to talk \n"
-				+ "Music loud and women warm \n"
-				+ "I've been kicked around since I was born\n"
-				+ "\n"
-				+ "And now it's all right, that's okay \n"
-				+ "And you may look the other way \n"
-				+ "We can try to understand \n"
-				+ "The New York Times' effect on man\n"
-				+ "\n"
-				+ "Whether you're a brother or whether you're a mother \n"
-				+ "You're stayin' alive, stayin' alive \n"
-				+ "Feel the city breakin' and everybody shakin' \n"
-				+ "And we're stayin' alive, stayin' alive \n"
-				+ "Ah, ha, ha, ha, stayin' alive, stayin' alive \n"
-				+ "Ah, ha, ha, ha, stayin' alive \n"
-				+ "Oh when you walk\n"
-				+ "\n"
-				+ "Well now, I get low and I get high \n"
-				+ "And if I can't get either, I really try \n"
-				+ "Got the wings of heaven on my shoes \n"
-				+ "I'm a dancin' man and I just can't lose\n"
-				+ "\n"
-				+ "You know it's all right, it's okay \n"
-				+ "I'll live to see another day \n"
-				+ "We can try to understand \n"
-				+ "The New York Times' effect on man\n"
-				+ "\n"
-				+ "Whether you're a brother or whether you're a mother \n"
-				+ "You're stayin' alive, stayin' alive \n"
-				+ "Feel the city breakin' and everybody shakin' \n"
-				+ "And we're stayin' alive, stayin' alive \n"
-				+ "Ah, ha, ha, ha, stayin' alive, stayin' alive \n"
-				+ "Ah, ha, ha, ha, stayin' alive\n"
-				+ "\n"
-				+ "Life goin' nowhere, somebody help me \n"
-				+ "Somebody help me, yeah \n"
-				+ "Life goin' nowhere, somebody help me, yeah \n"
-				+ "I'm stayin' alive\n"
-				+ "\n"
-				+ "Well, you can tell by the way I use my walk \n"
-				+ "I'm a woman's man, no time to talk \n"
-				+ "Music loud and women warm \n"
-				+ "I've been kicked around since I was born\n"
-				+ "\n"
-				+ "And now it's all right, it's okay \n"
-				+ "And you may look the other way \n"
-				+ "We can try to understand \n"
-				+ "The New York Times' effect on man\n"
-				+ "\n"
-				+ "Whether you're a brother or whether you're a mother \n"
-				+ "You're stayin' alive, stayin' alive \n"
-				+ "Feel the city breakin' and everybody shakin' \n"
-				+ "And we're stayin' alive, stayin' alive \n"
-				+ "Ah, ha, ha, ha, stayin' alive, stayin' alive \n"
-				+ "Ah, ha, ha, ha, stayin' alive\n"
-				+ "\n"
-				+ "Life goin' nowhere, somebody help me \n"
-				+ "Somebody help me, yeah \n"
-				+ "Life goin' nowhere, somebody help me, yeah \n"
-				+ "I'm stayin' alive \n"
-				+ "Life goin' nowhere, somebody help me \n"
-				+ "Somebody help me, yeah \n"
-				+ "Life goin' nowhere, somebody help me, yeah \n"
-				+ "I'm stayin' alive \n"
-				+ "Life goin' nowhere, somebody help me \n"
-				+ "Somebody help me, yeah \n"
-				+ "Life goin' nowhere, somebody help me, yeah \n"
-				+ "I'm stayin' alive \n"
-				+ "Life goin' nowhere, somebody help me \n"
-				+ "Somebody help me, yeah \n"
-				+ "Life goin' nowhere, somebody help me, yeah \n"
-				+ "I'm stayin' alive");
+		speak("You will become a landscaper!");
+		} else if (rand==2) {
+			System.out.println("Woohoo!");
+			speak("You will become a grocery store owner");
+		} else if (rand==3) {
+			System.out.println("Woohoo!");
+			speak("You will become a traveling salesman!");
+		} else if (rand==1) {
+			System.out.println("Woohoo!");
+			speak("You will become a data manager");
+		}
+		
 	}
 	
      static void speak(String characterToSpeak) {
