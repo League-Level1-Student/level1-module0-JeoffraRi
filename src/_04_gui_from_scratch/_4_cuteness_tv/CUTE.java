@@ -15,6 +15,7 @@ public class CUTE implements ActionListener {
 		CUTE cute = new CUTE();
 	}
 	
+	JButton button = new JButton();
 	
 	CUTE(){
 		
@@ -22,7 +23,7 @@ public class CUTE implements ActionListener {
 		frame.setVisible(true);
 		JPanel panel = new JPanel();
 		frame.add(panel);
-		JButton button = new JButton();
+		button.setText("waddlewaddle");
 		button.addActionListener(this);
 		panel.add(button);
 		frame.pack();
@@ -59,8 +60,10 @@ public class CUTE implements ActionListener {
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent buttonData) {
 		System.out.println("this button works");
-		
+		if(buttonData.getSource()==button) {
+			showDucks();
+		}
 	}
 }
