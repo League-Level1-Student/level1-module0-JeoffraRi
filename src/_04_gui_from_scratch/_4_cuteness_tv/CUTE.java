@@ -16,6 +16,8 @@ public class CUTE implements ActionListener {
 	}
 	
 	JButton button = new JButton();
+	JButton button2 = new JButton();
+	JButton button3 = new JButton();
 	
 	CUTE(){
 		
@@ -25,6 +27,10 @@ public class CUTE implements ActionListener {
 		frame.add(panel);
 		button.setText("waddlewaddle");
 		button.addActionListener(this);
+		button2.setText("croakcroak");
+		button2.addActionListener(this);
+		button3.setText("neighneigh");
+		button3.addActionListener(this);
 		panel.add(button);
 		frame.pack();
 	}
@@ -64,6 +70,12 @@ public class CUTE implements ActionListener {
 		System.out.println("this button works");
 		if(buttonData.getSource()==button) {
 			showDucks();
+		}
+		if(buttonData.getSource()==button2) {
+			showFrog();
+		}
+		if(buttonData.getSource()==button3) {
+			showFluffyUnicorns();
 		}
 	}
 }
