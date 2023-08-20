@@ -32,6 +32,8 @@ public class CUTE implements ActionListener {
 		button3.setText("neighneigh");
 		button3.addActionListener(this);
 		panel.add(button);
+		panel.add(button2);
+		panel.add(button3);
 		frame.pack();
 	}
 	
